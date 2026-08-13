@@ -21,7 +21,8 @@
 I'm a Software Engineering student at **FPT University Đà Nẵng**, working mainly on the **backend** — C#/.NET and Java — with the database layer that sits behind it.
 
 - 🧩 I like problems where the hard part is the **data model and the flow**, not the screen.
-- 🛠️ Most of what I build starts as a real annoyance: cinema booking that's a mess to manage, a checkout that loses orders, ten school portals that each want the same login.
+- 🛠️ Most of what I build starts as a real annoyance: a checkout that loses orders, ten school portals that each want the same login, a CV you have no way to verify.
+- 🤖 On my team's SWP391 project I owned the **Python/FastAPI AI service** and took it all the way to **production on GCP** — pipelines, deployment, SSL, backups.
 - 📚 Currently going deeper on **.NET**, clean layering, and writing services that are actually testable.
 - 🎯 Looking for a **backend / fullstack internship** where I can ship real features and get reviewed hard.
 
@@ -34,17 +35,31 @@ I'm a Software Engineering student at **FPT University Đà Nẵng**, working ma
 ![C#](https://img.shields.io/badge/C%23-512BD4?style=flat-square&logo=csharp&logoColor=white)
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![Servlet / JSP](https://img.shields.io/badge/Servlet%20%2F%20JSP-007396?style=flat-square&logo=apachetomcat&logoColor=white)
 ![Tomcat](https://img.shields.io/badge/Tomcat-F8DC75?style=flat-square&logo=apachetomcat&logoColor=black)
 
 **Data**
 
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![EF Core](https://img.shields.io/badge/EF%20Core-512BD4?style=flat-square&logo=nuget&logoColor=white)
+
+**AI & Infrastructure**
+
+![Claude API](https://img.shields.io/badge/Claude%20API-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 
 **Frontend & Tooling**
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=white)
@@ -87,10 +102,33 @@ Browser extension that removes the daily friction of being an FPTU student.
 <tr>
 <td colspan="2" valign="top">
 
-### 🔍 [CVerify](https://github.com/TNL293107/CVerify-Forked)
-**Team project · SWP391**
+### 🔍 [CVerify](https://github.com/fptu-se-su26/swp391-su26-ai-audit-project-swp391_se20a02_group-05) — AI candidate verification platform
+**Team of 5 · SWP391 · [82 commits](https://github.com/fptu-se-su26/swp391-su26-ai-audit-project-swp391_se20a02_group-05/commits?author=TNL293107) · shipped to production**
 
-AI-audit project built with my SU26 group — coursework done as a real team repo with a proper review flow.
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Claude API](https://img.shields.io/badge/Claude%20API-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-512BD4?style=flat-square&logo=dotnet&logoColor=white)
+![EF Core](https://img.shields.io/badge/EF%20Core-512BD4?style=flat-square&logo=nuget&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+
+Screens a candidate by cross-checking their CV against their real GitHub work and a job description — instead of trusting what the CV claims.
+
+**What I owned:**
+
+- **`CVerify.AI` service** — ported the whole AI layer from C# stubs to a **Python / FastAPI** service: 7 agents (CV, GitHub, matching, scoring, skill-extraction, verification, recommendation) on the Claude API
+- **Three analysis pipelines** — L1 repository intelligence, L2 candidate evaluation, L3 JD matching; each with its own orchestrator, prompt factory and test suite
+- **Document extraction** — PDF / DOCX / image / OCR → Markdown, chosen for token efficiency
+- **Code intelligence** — cyclomatic + cognitive complexity (`lizard`), near-duplicate clone detection via **MinHash LSH** (`datasketch`), plus technology and architecture-pattern detectors
+- **Backend (C#)** — JD module end to end: controllers, DTOs, entities, services, EF Core migrations
+- **Production deployment** — migrated the runbook **AWS EC2 → GCP**, subdomain routing behind a reverse proxy, self-hosted MinIO object storage, automated SSL renewal, daily backups and a working CI deploy pipeline
+- **Reverse-engineered architecture docs** — source-verified Mermaid diagrams of a system I did not originally write
+
+<sub>Hardening I'm oddly proud of: making Claude JSON extraction survive trailing prose, and scoping the OAuth state cookie to the shared domain after logging every silent early-exit branch in the callback.</sub>
 
 </td>
 </tr>
