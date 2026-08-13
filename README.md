@@ -85,18 +85,7 @@ Browser extension that removes the daily friction of being an FPTU student.
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
-
-### 🎬 [CinemaPRO192](https://github.com/TNL293107/CinemaPRO192)
-**Java Swing · MySQL**
-
-Desktop cinema operations app — movies, showtimes, seat reservations and admin controls.
-
-- Reworked the core **reservation workflow**
-- Practice in desktop UI + relational data modelling
-
-</td>
-<td width="50%" valign="top">
+<td colspan="2" valign="top">
 
 ### 🔍 [CVerify](https://github.com/TNL293107/CVerify-Forked)
 **Team project · SWP391**
