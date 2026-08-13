@@ -1,10 +1,3 @@
-# TNL293107
-
-> Recruiter-friendly proof and contact path.
-
-**Theme:** GitHub · **Style:** Minimal · **Agent:** Full-Stack Engineer
-
-## Header
 Hi, I'm **TNL293107**. This README is tuned for **get hired** with a GitHub visual system.
 <p align="center">
   <picture>
