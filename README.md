@@ -117,8 +117,13 @@ AI-audit project built with my SU26 group — coursework done as a real team rep
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=TNL293107&show_icons=true&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&icon_color=1F6FEB&include_all_commits=true&count_private=true" alt="stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=TNL293107&layout=compact&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&langs_count=6" alt="top languages" />
+<img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TNL293107&theme=github_dark" alt="profile summary" />
+
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TNL293107&theme=github_dark" alt="repositories per language" />
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=TNL293107&theme=github_dark" alt="most committed language" />
+
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=TNL293107&theme=github_dark" alt="stats" />
+<img height="180" src="https://streak-stats.demolab.com?user=TNL293107&background=0D1117&border=30363D&stroke=30363D&ring=58A6FF&fire=1F6FEB&currStreakLabel=58A6FF&sideLabels=C9D1D9&dates=8B949E&currStreakNum=C9D1D9&sideNums=C9D1D9&hide_border=true" alt="contribution streak" />
 
 <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=TNL293107&bg_color=0D1117&color=58A6FF&line=1F6FEB&point=C9D1D9&area=true&hide_border=true" alt="activity graph" />
 
