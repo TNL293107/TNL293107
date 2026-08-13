@@ -74,7 +74,13 @@ I'm a Software Engineering student at **FPT University Đà Nẵng**, working ma
 <td width="50%" valign="top">
 
 ### 🛒 [DWatch](https://github.com/TNL293107/DWatch)
-**Java 17 · Servlet/JSP · SQL Server · Maven**
+
+![Java](https://img.shields.io/badge/Java%2017-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Servlet / JSP](https://img.shields.io/badge/Servlet%20%2F%20JSP-007396?style=flat-square&logo=apachetomcat&logoColor=white)
+![JSTL](https://img.shields.io/badge/JSTL-007396?style=flat-square&logo=apachetomcat&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=white)
+![Tomcat](https://img.shields.io/badge/Tomcat-F8DC75?style=flat-square&logo=apachetomcat&logoColor=black)
 
 A full watch e-commerce platform, not a demo shop.
 
@@ -88,7 +94,12 @@ A full watch e-commerce platform, not a demo shop.
 <td width="50%" valign="top">
 
 ### 🧰 [FU-Autokit](https://github.com/TNL293107/FU-Autokit)
-**JavaScript · Chrome MV3 · jQuery · Bootstrap**
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Chrome MV3](https://img.shields.io/badge/Chrome%20MV3-4285F4?style=flat-square&logo=googlechrome&logoColor=white)
+![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
+![Service Worker](https://img.shields.io/badge/Service%20Worker-5A0FC8?style=flat-square&logo=pwa&logoColor=white)
 
 Browser extension that removes the daily friction of being an FPTU student.
 
@@ -102,8 +113,8 @@ Browser extension that removes the daily friction of being an FPTU student.
 <tr>
 <td colspan="2" valign="top">
 
-### 🔍 [CVerify](https://github.com/fptu-se-su26/swp391-su26-ai-audit-project-swp391_se20a02_group-05) — AI candidate verification platform
-**Team of 5 · SWP391 · [82 commits](https://github.com/fptu-se-su26/swp391-su26-ai-audit-project-swp391_se20a02_group-05/commits?author=TNL293107) · shipped to production**
+### 🔍 [CVerify](https://github.com/TNL293107/CVerify-Forked) — AI candidate verification platform
+**Team of 5 · SWP391 · [82 commits](https://github.com/TNL293107/CVerify-Forked/commits?author=TNL293107) · shipped to production**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
