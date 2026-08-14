@@ -155,15 +155,15 @@ Screens a candidate by cross-checking their CV against their real GitHub work an
 
 <div align="center">
 
-<img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TNL293107&theme=github_dark" alt="profile summary" />
+<img height="180" src="https://streak-stats.demolab.com?user=TNL293107&starting_year=2023&background=0D1117&border=30363D&stroke=30363D&ring=58A6FF&fire=1F6FEB&currStreakLabel=58A6FF&sideLabels=C9D1D9&dates=8B949E&currStreakNum=C9D1D9&sideNums=C9D1D9&hide_border=true" alt="contribution streak since 2023" />
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=TNL293107&theme=github_dark" alt="stats" />
 
 <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TNL293107&theme=github_dark" alt="repositories per language" />
 <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=TNL293107&theme=github_dark" alt="most committed language" />
 
-<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=TNL293107&theme=github_dark" alt="stats" />
-<img height="180" src="https://streak-stats.demolab.com?user=TNL293107&background=0D1117&border=30363D&stroke=30363D&ring=58A6FF&fire=1F6FEB&currStreakLabel=58A6FF&sideLabels=C9D1D9&dates=8B949E&currStreakNum=C9D1D9&sideNums=C9D1D9&hide_border=true" alt="contribution streak" />
-
 <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=TNL293107&bg_color=0D1117&color=58A6FF&line=1F6FEB&point=C9D1D9&area=true&hide_border=true" alt="activity graph" />
+
+<sub>Counts start from my first commit in <b>August 2023</b>. GitHub does not count commits made in a fork, so most of my <a href="https://github.com/TNL293107/CVerify-Forked/commits?author=TNL293107">CVerify work</a> and my private repositories sit outside these numbers.</sub>
 
 </div>
 
