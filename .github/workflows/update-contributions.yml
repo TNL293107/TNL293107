@@ -1,4 +1,4 @@
-name: Update contribution count
+name: Update contribution stats
 
 on:
   schedule:
@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Sum contributions since ${{ env.FIRST_YEAR }}
+      - name: Collect stats since ${{ env.FIRST_YEAR }}
         id: count
         env:
           # GITHUB_TOKEN is enough to read a public contribution calendar. If
@@ -35,73 +35,124 @@ jobs:
         run: |
           set -euo pipefail
 
-          query='query($login:String!,$from:DateTime!,$to:DateTime!){
+          # Contributions, commits and PRs are per-period totals, so they are
+          # summed year by year. Repositories contributed to is a distinct
+          # count and would be wrong if summed the same way.
+          yearly='query($login:String!,$from:DateTime!,$to:DateTime!){
             user(login:$login){
               contributionsCollection(from:$from,to:$to){
                 contributionCalendar{ totalContributions }
+                totalCommitContributions
+                totalPullRequestContributions
               }
             }
           }'
 
-          total=0
+          repos_query='query($login:String!){
+            user(login:$login){
+              repositoriesContributedTo(
+                contributionTypes:[COMMIT,PULL_REQUEST],
+                includeUserRepositories:true,
+                first:0
+              ){ totalCount }
+            }
+          }'
+
+          contributions=0
+          commits=0
+          prs=0
+
           for year in $(seq "$FIRST_YEAR" "$(date -u +%Y)"); do
-            year_total=$(gh api graphql \
-              -f query="$query" \
-              -F login="$LOGIN" \
-              -F from="${year}-01-01T00:00:00Z" \
-              -F to="${year}-12-31T23:59:59Z" \
-              --jq '.data.user.contributionsCollection.contributionCalendar.totalContributions')
+            read -r y_contrib y_commits y_prs < <(
+              gh api graphql \
+                -f query="$yearly" \
+                -F login="$LOGIN" \
+                -F from="${year}-01-01T00:00:00Z" \
+                -F to="${year}-12-31T23:59:59Z" \
+                --jq '.data.user.contributionsCollection
+                      | "\(.contributionCalendar.totalContributions) \(.totalCommitContributions) \(.totalPullRequestContributions)"'
+            )
 
-            # A non-numeric answer means the API shape changed or the token
-            # lost access. Writing that into the badge would be worse than
-            # failing, so stop here and leave the README untouched.
-            if ! [[ "$year_total" =~ ^[0-9]+$ ]]; then
-              echo "::error::$year returned a non-numeric total: '$year_total'"
-              exit 1
-            fi
+            for value in "$y_contrib" "$y_commits" "$y_prs"; do
+              if ! [[ "$value" =~ ^[0-9]+$ ]]; then
+                echo "::error::$year returned a non-numeric value: '$value'"
+                exit 1
+              fi
+            done
 
-            echo "$year: $year_total"
-            total=$((total + year_total))
+            echo "$year: contributions=$y_contrib commits=$y_commits prs=$y_prs"
+            contributions=$((contributions + y_contrib))
+            commits=$((commits + y_commits))
+            prs=$((prs + y_prs))
           done
 
-          if [ "$total" -eq 0 ]; then
-            echo "::error::total came back as 0, refusing to overwrite the badge"
+          repos=$(gh api graphql -f query="$repos_query" -F login="$LOGIN" \
+            --jq '.data.user.repositoriesContributedTo.totalCount')
+
+          if ! [[ "$repos" =~ ^[0-9]+$ ]]; then
+            echo "::error::repository count was non-numeric: '$repos'"
             exit 1
           fi
 
-          echo "total=$total" >> "$GITHUB_OUTPUT"
-          echo "Total since $FIRST_YEAR: $total"
+          # A zero here means the query succeeded but returned nothing useful.
+          # Writing that into the badges would be worse than failing.
+          if [ "$contributions" -eq 0 ] || [ "$commits" -eq 0 ]; then
+            echo "::error::contributions=$contributions commits=$commits, refusing to overwrite"
+            exit 1
+          fi
 
-      - name: Rewrite the badge
+          {
+            echo "contributions=$contributions"
+            echo "commits=$commits"
+            echo "prs=$prs"
+            echo "repos=$repos"
+          } >> "$GITHUB_OUTPUT"
+
+          echo "Totals: contributions=$contributions commits=$commits prs=$prs repos=$repos"
+
+      - name: Rewrite the badges
         id: rewrite
         env:
-          TOTAL: ${{ steps.count.outputs.total }}
+          CONTRIBUTIONS: ${{ steps.count.outputs.contributions }}
+          COMMITS: ${{ steps.count.outputs.commits }}
+          PRS: ${{ steps.count.outputs.prs }}
+          REPOS: ${{ steps.count.outputs.repos }}
         run: |
           set -euo pipefail
 
-          before=$(grep -c 'contributions:start' "$README" || true)
-          if [ "$before" -ne 1 ]; then
-            echo "::error::expected exactly one contributions:start marker, found $before"
+          markers=$(grep -c 'stats:start' "$README" || true)
+          if [ "$markers" -ne 1 ]; then
+            echo "::error::expected exactly one stats:start marker, found $markers"
             exit 1
           fi
 
-          badge="https://img.shields.io/badge/${TOTAL}%20contributions-since%20Aug%20${FIRST_YEAR}-1F6FEB?style=for-the-badge&labelColor=0D1117"
+          python3 - "$README" <<'PY'
+          import os, re, sys
 
-          python3 - "$README" "$badge" "$TOTAL" <<'PY'
-          import re, sys
+          path = sys.argv[1]
 
-          path, badge, total = sys.argv[1], sys.argv[2], sys.argv[3]
+          # label, value, colour, alt text
+          badges = [
+              ("contributions",  os.environ["CONTRIBUTIONS"], "1F6FEB", "{} contributions"),
+              ("commits",        os.environ["COMMITS"],       "388BFD", "{} commits"),
+              ("pull requests",  os.environ["PRS"],           "58A6FF", "{} pull requests"),
+              ("repositories",   os.environ["REPOS"],         "79C0FF", "contributed to {} repositories"),
+          ]
+
+          lines = ["<!-- stats:start -->"]
+          for label, value, colour, alt in badges:
+              slug = label.replace(" ", "%20")
+              url = (
+                  f"https://img.shields.io/badge/{slug}-{value}-{colour}"
+                  "?style=for-the-badge&labelColor=0D1117"
+              )
+              lines.append(f'<img src="{url}" alt="{alt.format(value)}" />')
+          lines.append("<!-- stats:end -->")
+
           src = open(path, encoding="utf-8").read()
-
-          replacement = (
-              "<!-- contributions:start -->\n"
-              f'<img src="{badge}" alt="{total} contributions since August 2023" />\n'
-              "<!-- contributions:end -->"
-          )
-
           out, n = re.subn(
-              r"<!-- contributions:start -->.*?<!-- contributions:end -->",
-              lambda _: replacement,
+              r"<!-- stats:start -->.*?<!-- stats:end -->",
+              lambda _: "\n".join(lines),
               src,
               flags=re.DOTALL,
           )
@@ -114,7 +165,7 @@ jobs:
 
           if git diff --quiet -- "$README"; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "Badge already reads $TOTAL, nothing to commit."
+            echo "Badges already current, nothing to commit."
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
@@ -122,11 +173,11 @@ jobs:
       - name: Commit
         if: steps.rewrite.outputs.changed == 'true'
         env:
-          TOTAL: ${{ steps.count.outputs.total }}
+          CONTRIBUTIONS: ${{ steps.count.outputs.contributions }}
         run: |
           set -euo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$README"
-          git commit -m "chore: update contribution count to $TOTAL"
+          git commit -m "chore: update contribution stats ($CONTRIBUTIONS contributions)"
           git push

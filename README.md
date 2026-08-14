@@ -184,14 +184,16 @@ Screens a candidate by cross-checking their CV against their real GitHub work an
 <div align="center">
 
 <p>
-<!-- contributions:start -->
-<img src="https://img.shields.io/badge/489%20contributions-since%20Aug%202023-1F6FEB?style=for-the-badge&labelColor=0D1117" alt="489 contributions since August 2023" />
-<!-- contributions:end -->
-<img src="https://img.shields.io/badge/first%20commit-Aug%205,%202023-58A6FF?style=for-the-badge&labelColor=0D1117" alt="first commit August 2023" />
+<!-- stats:start -->
+<img src="https://img.shields.io/badge/contributions-489-1F6FEB?style=for-the-badge&labelColor=0D1117" alt="489 contributions" />
+<img src="https://img.shields.io/badge/commits-444-388BFD?style=for-the-badge&labelColor=0D1117" alt="444 commits" />
+<img src="https://img.shields.io/badge/pull%20requests-32-58A6FF?style=for-the-badge&labelColor=0D1117" alt="32 pull requests" />
+<img src="https://img.shields.io/badge/repositories-8-79C0FF?style=for-the-badge&labelColor=0D1117" alt="contributed to 8 repositories" />
+<!-- stats:end -->
 </p>
 
 <p>
-<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=TNL293107&theme=github_dark" alt="stats" />
+<sub>Since my first commit in <b>August 2023</b>, updated daily.</sub>
 </p>
 
 <p>
