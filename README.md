@@ -164,7 +164,11 @@ Screens a candidate by cross-checking their CV against their real GitHub work an
 
 <p>
 <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=TNL293107&theme=github_dark" alt="stats" />
-<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=TNL293107&theme=github_dark" alt="most committed language" />
+</p>
+
+<p>
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TNL293107&theme=github_dark" alt="top languages by repository" />
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=TNL293107&theme=github_dark" alt="top languages by commit" />
 </p>
 
 <p>
