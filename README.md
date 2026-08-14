@@ -3,7 +3,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:1F6FEB,100:58A6FF&height=180&section=header&text=Tr%E1%BA%A7n%20Nh%E1%BA%A5t%20Long&fontColor=FFFFFF&fontSize=42&fontAlignY=32&desc=Backend-focused%20Software%20Engineering%20student&descAlignY=53&descSize=16" alt="banner" />
 
 <a href="https://github.com/TNL293107">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=58A6FF&center=true&vCenter=true&width=520&lines=C%23+%2F+.NET+%C2%B7+Java+%C2%B7+SQL;Building+things+that+actually+ship;SE+student+%40+FPT+University+%C4%90%C3%A0+N%E1%BA%B5ng" alt="typing" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=58A6FF&center=true&vCenter=true&width=520&lines=C%23+%2F+.NET+%C2%B7+Java+%C2%B7+Python+%C2%B7+SQL;Building+things+that+actually+ship;SE+student+%40+FPT+University+%C4%90%C3%A0+N%E1%BA%B5ng" alt="typing" />
 </a>
 
 <br />
@@ -38,7 +38,7 @@ I'm a Software Engineering student at **FPT University Đà Nẵng**, working ma
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![Servlet / JSP](https://img.shields.io/badge/Servlet%20%2F%20JSP-007396?style=flat-square&logo=apachetomcat&logoColor=white)
-![Tomcat](https://img.shields.io/badge/Tomcat-F8DC75?style=flat-square&logo=apachetomcat&logoColor=black)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white)
 
 **Data**
 
@@ -56,14 +56,15 @@ I'm a Software Engineering student at **FPT University Đà Nẵng**, working ma
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 
-**Frontend & Tooling**
+**Frontend & Testing**
 
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
-![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![xUnit](https://img.shields.io/badge/xUnit-512BD4?style=flat-square&logo=dotnet&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
+![Testcontainers](https://img.shields.io/badge/Testcontainers-291A47?style=flat-square&logo=docker&logoColor=white)
 
 <br />
 
@@ -73,7 +74,54 @@ I'm a Software Engineering student at **FPT University Đà Nẵng**, working ma
 <tr>
 <td width="50%" valign="top">
 
-### 🛒 [DWatch](https://github.com/TNL293107/DWatch)
+### 📈 [PQT](https://github.com/TNL293107/PQT) — quant trading terminal
+
+![C#](https://img.shields.io/badge/C%23%2014-512BD4?style=flat-square&logo=csharp&logoColor=white)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core%2010-512BD4?style=flat-square&logo=dotnet&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL%2017-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis%208-DC382D?style=flat-square&logo=redis&logoColor=white)
+![React](https://img.shields.io/badge/React%2019-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![C++](https://img.shields.io/badge/C%2B%2B20-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+**Personal · <img src="https://img.shields.io/badge/in%20development-D29922?style=flat-square&labelColor=0D1117" alt="in development" valign="middle" />**
+
+A Bloomberg-inspired research and trading workstation for the Vietnam market (HOSE/HNX/UPCOM) — the loop from market data through research and risk to execution.
+
+- **Modular monolith**, not microservices — .NET, React, Python and C++ layers, every significant decision written down as an ADR
+- **Readiness that means something** — a real PostgreSQL round-trip and a Redis `PING`, reported per dependency, disclosing no host or driver
+- **Four test suites in CI** — .NET, Vitest, pytest, CTest — with integration tests on real containers via Testcontainers
+- Phase 0 done; building the **instrument master**, so one security has one identity no matter how a provider spells it
+
+</td>
+<td width="50%" valign="top">
+
+### 🔍 [CVerify](https://github.com/fptu-se-su26/swp391-su26-ai-audit-project-swp391_se20a02_group-05) — AI candidate verification
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Claude API](https://img.shields.io/badge/Claude%20API-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-512BD4?style=flat-square&logo=dotnet&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+
+**Team · [82 commits](https://github.com/fptu-se-su26/swp391-su26-ai-audit-project-swp391_se20a02_group-05/commits?author=TNL293107) · shipped to production**
+
+Screens a candidate by cross-checking their CV against their real GitHub work and a job description, instead of trusting what the CV claims.
+
+- Ported the AI layer from C# stubs to a **Python / FastAPI** service — Claude-API agents across three pipelines: repository intelligence, candidate evaluation, JD matching
+- **Code intelligence** — cyclomatic and cognitive complexity, near-duplicate clone detection via MinHash LSH, and PDF/DOCX/OCR → Markdown extraction
+- **C# backend** — the JD module end to end: controllers, DTOs, entities, services, EF Core migrations
+- **Production** — moved deployment AWS EC2 → GCP: reverse proxy, self-hosted MinIO, SSL renewal, daily backups, CI deploy
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🛒 [DWatch](https://github.com/TNL293107/DWatch) — watch e-commerce
 
 ![Java](https://img.shields.io/badge/Java%2017-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 ![Servlet / JSP](https://img.shields.io/badge/Servlet%20%2F%20JSP-007396?style=flat-square&logo=apachetomcat&logoColor=white)
@@ -82,18 +130,20 @@ I'm a Software Engineering student at **FPT University Đà Nẵng**, working ma
 ![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=white)
 ![Tomcat](https://img.shields.io/badge/Tomcat-F8DC75?style=flat-square&logo=apachetomcat&logoColor=black)
 
+**Personal · full stack on plain Servlet/JSP**
+
 A full watch e-commerce platform, not a demo shop.
 
-- Auth with email password-reset (1h token expiry)
+- Auth with email password reset (1 h token expiry)
 - Cart, checkout, **COD + VietQR** payment
 - Guest order tracking by ID + phone/email
-- Product comparison (up to 3), wishlist, admin panel
+- Product comparison (up to 3), wishlist, admin CRUD
 - Order confirmation mail via Commons Email / SMTP
 
 </td>
 <td width="50%" valign="top">
 
-### 🧰 [FU-Autokit](https://github.com/TNL293107/FU-Autokit)
+### 🧰 [FU-Autokit](https://github.com/TNL293107/FU-Autokit) — student browser toolkit
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![Chrome MV3](https://img.shields.io/badge/Chrome%20MV3-4285F4?style=flat-square&logo=googlechrome&logoColor=white)
@@ -101,73 +151,14 @@ A full watch e-commerce platform, not a demo shop.
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
 ![Service Worker](https://img.shields.io/badge/Service%20Worker-5A0FC8?style=flat-square&logo=pwa&logoColor=white)
 
+**Personal · 260+ commits · used by real students**
+
 Browser extension that removes the daily friction of being an FPTU student.
 
 - Auto-login across **10+ school portals** (FAP, CMS, EduNext, FLM, Library…)
-- GPA calculator + score prediction
-- Auto lecturer rating & groupmate grading
+- GPA calculator + the FE score you need to pass
+- Sortable subject and tuition tables
 - VI/EN i18n, themeable UI, MV3 service worker
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
-
-### 📈 [PQT](https://github.com/TNL293107/PQT) — quantitative trading & market intelligence terminal
-**Personal engineering project · <img src="https://img.shields.io/badge/currently%20under%20development-D29922?style=flat-square&labelColor=0D1117" alt="currently under development" valign="middle" />**
-
-![C#](https://img.shields.io/badge/C%23%2014-512BD4?style=flat-square&logo=csharp&logoColor=white)
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core%2010-512BD4?style=flat-square&logo=dotnet&logoColor=white)
-![EF Core](https://img.shields.io/badge/EF%20Core-512BD4?style=flat-square&logo=nuget&logoColor=white)
-![React](https://img.shields.io/badge/React%2019-61DAFB?style=flat-square&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL%2017-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis%208-DC382D?style=flat-square&logo=redis&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B20-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/CI-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-
-A Bloomberg-inspired quantitative research and trading workstation, built as a long-term project — the closed loop from market data through research, backtest and risk to execution.
-
-- **Modular monolith**, not microservices — Domain / Application / Infrastructure / Api, with every significant decision written down as an ADR
-- **Health checks that mean something** — liveness touches no dependency, so a database outage cannot restart a healthy process; readiness does a real PostgreSQL round-trip and a Redis `PING`, returns 503 per dependency and discloses no host, port or driver
-- **Four independent test suites** — .NET, Vitest, pytest, CTest — each in CI, with integration tests starting real PostgreSQL and Redis via Testcontainers
-- **Constraints chosen up front** because they are expensive to retrofit: canonical instrument identity, point-in-time correctness, and a deterministic path where a strategy has no route to a broker
-- Phase 0 foundation complete; currently building **Phase 1 — Instrument Master**, so that `AAPL`, `AAPL.US` and its ISIN all resolve to one security
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
-
-### 🔍 [CVerify](https://github.com/TNL293107/CVerify-Forked) — AI candidate verification platform
-**Team project · [82 commits](https://github.com/TNL293107/CVerify-Forked/commits?author=TNL293107) · shipped to production**
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Claude API](https://img.shields.io/badge/Claude%20API-D97757?style=flat-square&logo=anthropic&logoColor=white)
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-512BD4?style=flat-square&logo=dotnet&logoColor=white)
-![EF Core](https://img.shields.io/badge/EF%20Core-512BD4?style=flat-square&logo=nuget&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-
-Screens a candidate by cross-checking their CV against their real GitHub work and a job description — instead of trusting what the CV claims.
-
-**What I owned:**
-
-- **`CVerify.AI` service** — ported the whole AI layer from C# stubs to a **Python / FastAPI** service: 7 agents (CV, GitHub, matching, scoring, skill-extraction, verification, recommendation) on the Claude API
-- **Three analysis pipelines** — L1 repository intelligence, L2 candidate evaluation, L3 JD matching; each with its own orchestrator, prompt factory and test suite
-- **Document extraction** — PDF / DOCX / image / OCR → Markdown, chosen for token efficiency
-- **Code intelligence** — cyclomatic + cognitive complexity (`lizard`), near-duplicate clone detection via **MinHash LSH** (`datasketch`), plus technology and architecture-pattern detectors
-- **Backend (C#)** — JD module end to end: controllers, DTOs, entities, services, EF Core migrations
-- **Production deployment** — migrated the runbook **AWS EC2 → GCP**, subdomain routing behind a reverse proxy, self-hosted MinIO object storage, automated SSL renewal, daily backups and a working CI deploy pipeline
-- **Reverse-engineered architecture docs** — source-verified Mermaid diagrams of a system I did not originally write
-
-<sub>Hardening I'm oddly proud of: making Claude JSON extraction survive trailing prose, and scoping the OAuth state cookie to the shared domain after logging every silent early-exit branch in the callback.</sub>
 
 </td>
 </tr>
@@ -205,7 +196,7 @@ Screens a candidate by cross-checking their CV against their real GitHub work an
 <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=TNL293107&bg_color=0D1117&color=58A6FF&line=1F6FEB&point=C9D1D9&area=true&hide_border=true" alt="activity graph" />
 </p>
 
-<sub>Counts start from my first commit in <b>August 2023</b> and include private repositories. GitHub does not count commits made in a fork, so most of my work on <a href="https://github.com/TNL293107/CVerify-Forked/commits?author=TNL293107"> CVerify</a> sit outside these numbers.</sub>
+<sub>Counts start from my first commit in <b>August 2023</b> and include private repositories. My CVerify work lives in the <a href="https://github.com/fptu-se-su26/swp391-su26-ai-audit-project-swp391_se20a02_group-05/commits?author=TNL293107">team repository</a>; <a href="https://github.com/TNL293107/CVerify-Forked">CVerify-Forked</a> is my mirror of it, and commits in a fork are not counted by GitHub.</sub>
 
 </div>
 
