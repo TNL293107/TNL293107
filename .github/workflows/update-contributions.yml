@@ -1,0 +1,132 @@
+name: Update contribution count
+
+on:
+  schedule:
+    # 03:00 UTC daily — 10:00 Asia/Ho_Chi_Minh
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-contributions
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      LOGIN: TNL293107
+      FIRST_YEAR: 2023
+      README: README.md
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sum contributions since ${{ env.FIRST_YEAR }}
+        id: count
+        env:
+          # GITHUB_TOKEN is enough to read a public contribution calendar. If
+          # GitHub ever stops allowing it, add a personal access token with
+          # read:user as a CONTRIB_TOKEN secret and this picks it up with no
+          # other change.
+          GH_TOKEN: ${{ secrets.CONTRIB_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          query='query($login:String!,$from:DateTime!,$to:DateTime!){
+            user(login:$login){
+              contributionsCollection(from:$from,to:$to){
+                contributionCalendar{ totalContributions }
+              }
+            }
+          }'
+
+          total=0
+          for year in $(seq "$FIRST_YEAR" "$(date -u +%Y)"); do
+            year_total=$(gh api graphql \
+              -f query="$query" \
+              -F login="$LOGIN" \
+              -F from="${year}-01-01T00:00:00Z" \
+              -F to="${year}-12-31T23:59:59Z" \
+              --jq '.data.user.contributionsCollection.contributionCalendar.totalContributions')
+
+            # A non-numeric answer means the API shape changed or the token
+            # lost access. Writing that into the badge would be worse than
+            # failing, so stop here and leave the README untouched.
+            if ! [[ "$year_total" =~ ^[0-9]+$ ]]; then
+              echo "::error::$year returned a non-numeric total: '$year_total'"
+              exit 1
+            fi
+
+            echo "$year: $year_total"
+            total=$((total + year_total))
+          done
+
+          if [ "$total" -eq 0 ]; then
+            echo "::error::total came back as 0, refusing to overwrite the badge"
+            exit 1
+          fi
+
+          echo "total=$total" >> "$GITHUB_OUTPUT"
+          echo "Total since $FIRST_YEAR: $total"
+
+      - name: Rewrite the badge
+        id: rewrite
+        env:
+          TOTAL: ${{ steps.count.outputs.total }}
+        run: |
+          set -euo pipefail
+
+          before=$(grep -c 'contributions:start' "$README" || true)
+          if [ "$before" -ne 1 ]; then
+            echo "::error::expected exactly one contributions:start marker, found $before"
+            exit 1
+          fi
+
+          badge="https://img.shields.io/badge/${TOTAL}%20contributions-since%20Aug%20${FIRST_YEAR}-1F6FEB?style=for-the-badge&labelColor=0D1117"
+
+          python3 - "$README" "$badge" "$TOTAL" <<'PY'
+          import re, sys
+
+          path, badge, total = sys.argv[1], sys.argv[2], sys.argv[3]
+          src = open(path, encoding="utf-8").read()
+
+          replacement = (
+              "<!-- contributions:start -->\n"
+              f'<img src="{badge}" alt="{total} contributions since August 2023" />\n'
+              "<!-- contributions:end -->"
+          )
+
+          out, n = re.subn(
+              r"<!-- contributions:start -->.*?<!-- contributions:end -->",
+              lambda _: replacement,
+              src,
+              flags=re.DOTALL,
+          )
+
+          if n != 1:
+              sys.exit(f"expected 1 marker block, replaced {n}")
+
+          open(path, "w", encoding="utf-8", newline="\n").write(out)
+          PY
+
+          if git diff --quiet -- "$README"; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Badge already reads $TOTAL, nothing to commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit
+        if: steps.rewrite.outputs.changed == 'true'
+        env:
+          TOTAL: ${{ steps.count.outputs.total }}
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$README"
+          git commit -m "chore: update contribution count to $TOTAL"
+          git push

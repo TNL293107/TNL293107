@@ -155,14 +155,21 @@ Screens a candidate by cross-checking their CV against their real GitHub work an
 
 <div align="center">
 
+<p>
+<!-- contributions:start -->
 <img src="https://img.shields.io/badge/482%20contributions-since%20Aug%202023-1F6FEB?style=for-the-badge&labelColor=0D1117" alt="482 contributions since August 2023" />
+<!-- contributions:end -->
 <img src="https://img.shields.io/badge/first%20commit-Aug%205,%202023-58A6FF?style=for-the-badge&labelColor=0D1117" alt="first commit August 2023" />
+</p>
 
+<p>
 <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=TNL293107&theme=github_dark" alt="stats" />
-<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TNL293107&theme=github_dark" alt="repositories per language" />
 <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=TNL293107&theme=github_dark" alt="most committed language" />
+</p>
 
+<p>
 <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=TNL293107&bg_color=0D1117&color=58A6FF&line=1F6FEB&point=C9D1D9&area=true&hide_border=true" alt="activity graph" />
+</p>
 
 <sub>Counts start from my first commit in <b>August 2023</b> and include private repositories. GitHub still does not count commits made in a fork, so most of my <a href="https://github.com/TNL293107/CVerify-Forked/commits?author=TNL293107">82 commits on CVerify</a> sit outside these numbers.</sub>
 
