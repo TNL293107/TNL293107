@@ -142,7 +142,7 @@ A Bloomberg-inspired quantitative research and trading workstation, built as a l
 <td colspan="2" valign="top">
 
 ### 🔍 [CVerify](https://github.com/TNL293107/CVerify-Forked) — AI candidate verification platform
-**Team of 5 · SWP391 · [82 commits](https://github.com/TNL293107/CVerify-Forked/commits?author=TNL293107) · shipped to production**
+**Team project · [82 commits](https://github.com/TNL293107/CVerify-Forked/commits?author=TNL293107) · shipped to production**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
