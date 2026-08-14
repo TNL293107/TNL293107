@@ -155,9 +155,10 @@ Screens a candidate by cross-checking their CV against their real GitHub work an
 
 <div align="center">
 
-<img height="180" src="https://streak-stats.demolab.com?user=TNL293107&starting_year=2023&background=0D1117&border=30363D&stroke=30363D&ring=58A6FF&fire=1F6FEB&currStreakLabel=58A6FF&sideLabels=C9D1D9&dates=8B949E&currStreakNum=C9D1D9&sideNums=C9D1D9&hide_border=true" alt="contribution streak since 2023" />
-<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=TNL293107&theme=github_dark" alt="stats" />
+<img src="https://img.shields.io/badge/482%20contributions-since%20Aug%202023-1F6FEB?style=for-the-badge&labelColor=0D1117" alt="482 contributions since August 2023" />
+<img src="https://img.shields.io/badge/first%20commit-Aug%205,%202023-58A6FF?style=for-the-badge&labelColor=0D1117" alt="first commit August 2023" />
 
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=TNL293107&theme=github_dark" alt="stats" />
 <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=TNL293107&theme=github_dark" alt="repositories per language" />
 <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=TNL293107&theme=github_dark" alt="most committed language" />
 
