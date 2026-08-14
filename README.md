@@ -97,7 +97,7 @@ A Bloomberg-inspired research and trading workstation for the Vietnam market (HO
 </td>
 <td width="50%" valign="top">
 
-### 🔍 [CVerify](https://github.com/fptu-se-su26/swp391-su26-ai-audit-project-swp391_se20a02_group-05) — AI candidate verification
+### 🔍 [CVerify](https://github.com/TNL293107/CVerify-Forked) — AI candidate verification
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
@@ -107,7 +107,7 @@ A Bloomberg-inspired research and trading workstation for the Vietnam market (HO
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
 
-**Team · [82 commits](https://github.com/fptu-se-su26/swp391-su26-ai-audit-project-swp391_se20a02_group-05/commits?author=TNL293107) · shipped to production**
+**Team · [82 commits](https://github.com/TNL293107/CVerify-Forked/commits?author=TNL293107) · shipped to production**
 
 Screens a candidate by cross-checking their CV against their real GitHub work and a job description, instead of trusting what the CV claims.
 
@@ -196,7 +196,7 @@ Browser extension that removes the daily friction of being an FPTU student.
 <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=TNL293107&bg_color=0D1117&color=58A6FF&line=1F6FEB&point=C9D1D9&area=true&hide_border=true" alt="activity graph" />
 </p>
 
-<sub>Counts start from my first commit in <b>August 2023</b> and include private repositories. My CVerify work lives in the <a href="https://github.com/fptu-se-su26/swp391-su26-ai-audit-project-swp391_se20a02_group-05/commits?author=TNL293107">team repository</a>; <a href="https://github.com/TNL293107/CVerify-Forked">CVerify-Forked</a> is my mirror of it, and commits in a fork are not counted by GitHub.</sub>
+<sub>Counts start from my first commit in <b>August 2023</b> and include private repositories. <a href="https://github.com/TNL293107/CVerify-Forked">CVerify</a> is a fork of my team's repository, so GitHub does not count its commits here — the upstream it was forked from is linked at the top of that page.</sub>
 
 </div>
 
