@@ -113,6 +113,34 @@ Browser extension that removes the daily friction of being an FPTU student.
 <tr>
 <td colspan="2" valign="top">
 
+### 📈 [PQT](https://github.com/TNL293107/PQT) — quantitative trading & market intelligence terminal
+**Personal engineering project · <img src="https://img.shields.io/badge/currently%20under%20development-D29922?style=flat-square&labelColor=0D1117" alt="currently under development" valign="middle" />**
+
+![C#](https://img.shields.io/badge/C%23%2014-512BD4?style=flat-square&logo=csharp&logoColor=white)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core%2010-512BD4?style=flat-square&logo=dotnet&logoColor=white)
+![EF Core](https://img.shields.io/badge/EF%20Core-512BD4?style=flat-square&logo=nuget&logoColor=white)
+![React](https://img.shields.io/badge/React%2019-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL%2017-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis%208-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![C++](https://img.shields.io/badge/C%2B%2B20-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/CI-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+
+A Bloomberg-inspired quantitative research and trading workstation, built as a long-term project — the closed loop from market data through research, backtest and risk to execution.
+
+- **Modular monolith**, not microservices — Domain / Application / Infrastructure / Api, with every significant decision written down as an ADR
+- **Health checks that mean something** — liveness touches no dependency, so a database outage cannot restart a healthy process; readiness does a real PostgreSQL round-trip and a Redis `PING`, returns 503 per dependency and discloses no host, port or driver
+- **Four independent test suites** — .NET, Vitest, pytest, CTest — each in CI, with integration tests starting real PostgreSQL and Redis via Testcontainers
+- **Constraints chosen up front** because they are expensive to retrofit: canonical instrument identity, point-in-time correctness, and a deterministic path where a strategy has no route to a broker
+- Phase 0 foundation complete; currently building **Phase 1 — Instrument Master**, so that `AAPL`, `AAPL.US` and its ISIN all resolve to one security
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
 ### 🔍 [CVerify](https://github.com/TNL293107/CVerify-Forked) — AI candidate verification platform
 **Team of 5 · SWP391 · [82 commits](https://github.com/TNL293107/CVerify-Forked/commits?author=TNL293107) · shipped to production**
 
