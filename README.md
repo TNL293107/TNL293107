@@ -175,7 +175,7 @@ Screens a candidate by cross-checking their CV against their real GitHub work an
 <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=TNL293107&bg_color=0D1117&color=58A6FF&line=1F6FEB&point=C9D1D9&area=true&hide_border=true" alt="activity graph" />
 </p>
 
-<sub>Counts start from my first commit in <b>August 2023</b> and include private repositories. GitHub still does not count commits made in a fork, so most of my <a href="https://github.com/TNL293107/CVerify-Forked/commits?author=TNL293107">82 commits on CVerify</a> sit outside these numbers.</sub>
+<sub>Counts start from my first commit in <b>August 2023</b> and include private repositories. GitHub does not count commits made in a fork, so most of my work on <a href="https://github.com/TNL293107/CVerify-Forked/commits?author=TNL293107"> CVerify</a> sit outside these numbers.</sub>
 
 </div>
 
