@@ -128,17 +128,18 @@ Screens a candidate by cross-checking their CV against their real GitHub work an
 ![JSTL](https://img.shields.io/badge/JSTL-007396?style=flat-square&logo=apachetomcat&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=white)
-![Tomcat](https://img.shields.io/badge/Tomcat-F8DC75?style=flat-square&logo=apachetomcat&logoColor=black)
+![JUnit 5](https://img.shields.io/badge/JUnit%205-25A162?style=flat-square&logo=junit5&logoColor=white)
+![BCrypt](https://img.shields.io/badge/BCrypt-004880?style=flat-square&logo=letsencrypt&logoColor=white)
 
 **Personal · full stack on plain Servlet/JSP**
 
-A full watch e-commerce platform, not a demo shop.
+A full watch e-commerce platform, not a demo shop — and lately, the project I went back and secured properly.
 
-- Auth with email password reset (1 h token expiry)
-- Cart, checkout, **COD + VietQR** payment
-- Guest order tracking by ID + phone/email
-- Product comparison (up to 3), wishlist, admin CRUD
-- Order confirmation mail via Commons Email / SMTP
+- Cart, checkout with **COD + VietQR**, guest order tracking, wishlist, admin CRUD
+- **BCrypt migration with nobody locked out** — verification still accepts the old plaintext rows and rehashes each one on its next correct login
+- **CSRF tokens across 17 forms** — which closed a real hole: `/admin/products?action=delete` was a GET link any site could fire from an `<img>` tag
+- Session fixation, open redirect and account enumeration fixed in the same auth pass
+- Service layer pulled out of the servlets, covered by **54 JUnit 5 + Mockito tests** that run without a database
 
 </td>
 <td width="50%" valign="top">
@@ -150,15 +151,16 @@ A full watch e-commerce platform, not a demo shop.
 ![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
 ![Service Worker](https://img.shields.io/badge/Service%20Worker-5A0FC8?style=flat-square&logo=pwa&logoColor=white)
+![node:test](https://img.shields.io/badge/node%3Atest-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)
 
 **Personal · 260+ commits · used by real students**
 
 Browser extension that removes the daily friction of being an FPTU student.
 
-- Auto-login across **10+ school portals** (FAP, CMS, EduNext, FLM, Library…)
+- Auto-login across **9 school portals** (FAP, CMS, EduNext, FLM, Library…)
 - GPA calculator + the FE score you need to pass
-- Sortable subject and tuition tables
 - VI/EN i18n, themeable UI, MV3 service worker
+- **33 tests** on `node --test` + jsdom, added years after the code — and they immediately caught a stray quote that had been 404-ing the default locale file for every fresh install
 
 </td>
 </tr>
