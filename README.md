@@ -178,9 +178,9 @@ Browser extension that removes the daily friction of being an FPTU student.
 
 <p>
 <!-- stats:start -->
-<img src="https://img.shields.io/badge/contributions-1002-1F6FEB?style=for-the-badge&labelColor=0D1117" alt="1002 contributions" />
+<img src="https://img.shields.io/badge/contributions-1005-1F6FEB?style=for-the-badge&labelColor=0D1117" alt="1005 contributions" />
 <img src="https://img.shields.io/badge/commits-918-388BFD?style=for-the-badge&labelColor=0D1117" alt="918 commits" />
-<img src="https://img.shields.io/badge/pull%20requests-63-58A6FF?style=for-the-badge&labelColor=0D1117" alt="63 pull requests" />
+<img src="https://img.shields.io/badge/pull%20requests-66-58A6FF?style=for-the-badge&labelColor=0D1117" alt="66 pull requests" />
 <img src="https://img.shields.io/badge/repositories-10-79C0FF?style=for-the-badge&labelColor=0D1117" alt="contributed to 10 repositories" />
 <!-- stats:end -->
 </p>
